@@ -4,12 +4,9 @@ var saveEl = $('.far')
 //variable to access the textarea
 var textEl = $('.description');
 
-
-
-
     //If I click Save icon, whate I've typed should save
     $('.saveBtn').on('click', function() {
-        
+        console.log("im here")
     
         //set variable to get access to textarea value
        
@@ -18,13 +15,9 @@ var textEl = $('.description');
         
         //Store the textarea value
         localStorage.setItem(storageValue, textValue);
-        //Get Text New function
-        
-        
     });
 
     function displayMessage() {
-
         // locally declare value so you can use it put it back into FOR EACH textarea element
          $('#am9 .description').val(localStorage.getItem('am9'));
          $('#am10 .description').val(localStorage.getItem('am10'));
