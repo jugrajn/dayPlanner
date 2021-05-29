@@ -4,39 +4,42 @@ var saveEl = $('.far')
 //variable to access the textarea
 var textEl = $('.description');
 
-$(document).ready(function() {
 
-//If I click Save icon, whate I've typed should save
-    $('.far').on('click', function() {
-        // event.preventDefault();
+
+
+    //If I click Save icon, whate I've typed should save
+    $('.saveBtn').on('click', function() {
+        
     
         //set variable to get access to textarea value
+       
         var textValue = $(this).siblings('.description').val();
-    
+        var storageValue = $(this).parent().attr('id');
+        
         //Store the textarea value
-        localStorage.setItem('textValue', textValue);
+        localStorage.setItem(storageValue, textValue);
         //Get Text New function
-        displayMessage()
-        console.log(textValue);
+        
+        
     });
 
     function displayMessage() {
 
         // locally declare value so you can use it put it back into FOR EACH textarea element
-         $('#am9 .description').val(localStorage.getItem('textValue'));
-         $('#am10 .description').val(localStorage.getItem('textValue'));
-         $('#am11 .description').val(localStorage.getItem('textValue'));
-         $('#pm12 .description').val(localStorage.getItem('textValue'));
-         $('#pm1 .description').val(localStorage.getItem('textValue'));
-         $('#pm2 .description').val(localStorage.getItem('textValue'));
-         $('#pm3 .description').val(localStorage.getItem('textValue'));
-         $('#pm4 .description').val(localStorage.getItem('textValue'));
-         $('#pm5 .description').val(localStorage.getItem('textValue'));
+         $('#am9 .description').val(localStorage.getItem('am9'));
+         $('#am10 .description').val(localStorage.getItem('am10'));
+         $('#am11 .description').val(localStorage.getItem('am11'));
+         $('#pm12 .description').val(localStorage.getItem('pm12'));
+         $('#pm1 .description').val(localStorage.getItem('pm1'));
+         $('#pm2 .description').val(localStorage.getItem('pm2'));
+         $('#pm3 .description').val(localStorage.getItem('pm3'));
+         $('#pm4 .description').val(localStorage.getItem('pm4'));
+         $('#pm5 .description').val(localStorage.getItem('pm5'));
     
     }
-    
-})
+    displayMessage();
 
 
 
-//Now display the message that was store by getting it back
+
+
