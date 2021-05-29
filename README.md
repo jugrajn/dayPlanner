@@ -23,4 +23,4 @@ THEN the saved events persist
 
 ## Screenshot
 
-![]("/screenshot.png")
+![](screenshot.png)
