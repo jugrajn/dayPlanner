@@ -27,12 +27,21 @@ var textEl = $('.description');
          $('#pm2 .description').val(localStorage.getItem('pm2'));
          $('#pm3 .description').val(localStorage.getItem('pm3'));
          $('#pm4 .description').val(localStorage.getItem('pm4'));
-         $('#pm5 .description').val(localStorage.getItem('pm5'));
-    
+         $('#pm5 .description').val(localStorage.getItem('pm5'));    
     }
     displayMessage();
 
+    // display the current time and day in real time. moment.js
+    var today = moment();
+    $('#currentDay').text(today.format('MMM Do YYYY, h:mm a'));
 
 
+    function trackTime() {
+        //define the current time in hours with the help of moment.js
+        var hourNow = moment().hour();
+
+        //loop through time blocks using jquery syntax
+        
+    }
 
 
